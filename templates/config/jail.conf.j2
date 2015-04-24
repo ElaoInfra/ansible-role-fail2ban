@@ -1,7 +1,7 @@
 [DEFAULT]
 
-{% if elao_fail2ban_configs.ignoreip %}
+{% if elao_fail2ban_configs.ignoreip|default(false) %}
 ignoreip = {{ elao_fail2ban_configs.ignoreip }}
 {% endif %}
-bantime = {{ elao_fail2ban_configs.bantime }}
-maxretry = {{ elao_fail2ban_configs.maxretry }}
+bantime = {{ elao_fail2ban_configs.bantime|default(600) }}
+maxretry = {{ elao_fail2ban_configs.maxretry|default(3) }}

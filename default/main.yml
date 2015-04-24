@@ -2,7 +2,4 @@
 
 elao_fail2ban_configs_dir:       /etc/fail2ban/jail.conf
 elao_fail2ban_configs_template:  configs/jail.conf.j2
-elao_fail2ban_configs:
-  ignoreip: false
-  bantime: 600
-  maxretry: 3
+elao_fail2ban_configs:           []
